@@ -1,18 +1,16 @@
 {
   "name": "rajul-pickleball-website",
   "version": "1.0.0",
-  "description": "Professional pickleball coaching website",
+  "description": "Professional pickleball coaching website for Raj in the Greater Seattle area",
   "main": "index.html",
   "scripts": {
     "dev": "npx live-server --port=3000",
     "start": "npx live-server --port=3000",
-    "build": "rm -rf dist && mkdir -p dist && cp -r *.html *.css *.js robots.txt images dist/ && touch dist/.nojekyll",
-    "postbuild": "cp vercel.json dist/",
-    "deploy": "npm run build && npx vercel --prod"
+    "build": "rm -rf dist && mkdir -p dist && cp -r *.html *.css *.js robots.txt images dist/ && touch dist/.nojekyll"
   },
-  "author": "",
+  "author": "Raj Pickleball Coaching",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.2"
   }
-} 
+}

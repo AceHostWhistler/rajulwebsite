@@ -1,20 +1,35 @@
 # Deployment Instructions
 
-## GitHub Pages Deployment
+This site deploys automatically to GitHub Pages when changes are pushed to `main`.
 
-To enable GitHub Pages for this repository:
+## Enable GitHub Pages
 
-1. Go to the repository settings (Settings tab)
-2. Scroll down to the "Pages" section in the left sidebar
-3. Under "Source", select "GitHub Actions" from the dropdown
-4. The site will be published at `https://[username].github.io/rajulwebsite/`
+1. Go to repository **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. After the next push to `main`, the workflow publishes the built site from the `dist/` folder
 
-## Manual Vercel Deployment
+## Custom domain (recommended)
 
-If you prefer to deploy directly to Vercel:
+To serve the site on its own domain instead of a GitHub-hosted URL:
 
-1. Install Vercel CLI: `npm install -g vercel`
-2. Login to Vercel: `vercel login`
-3. Deploy the site: `npm run deploy`
+1. Purchase or use a domain you control (e.g. `pickleballcoachseattle.com`)
+2. In **Settings → Pages → Custom domain**, enter your domain
+3. Add the DNS records GitHub provides (usually `A` records and a `CNAME` for `www`)
+4. Enable **Enforce HTTPS**
 
-The site will be deployed to your Vercel account under the project name "rajulwebsite". 
+Using a custom domain keeps this site fully independent in search results and branding.
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Manual build
+
+```bash
+npm run build
+```
+
+The static site output is written to `dist/`.
